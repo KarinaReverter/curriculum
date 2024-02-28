@@ -1,0 +1,167 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box1 {
+    background-color: rgb(14, 95, 128);
+    color: black;
+}
+
+/* header*/
+.navbar {
+    background: rgb(73, 183, 202);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    color: black;
+}
+
+.nav-items a {
+    margin: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/*::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido
+ estético a un elemento, usando la propiedad content . Este elemento se muestra en línea con el texto de forma predeterminada.*/
+
+.nav-items a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.5s;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+.contenedor-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 50px;
+    row-gap: 150px;
+}
+
+.proyectos{
+    margin: 20px;
+    padding: 20px;
+    font-size: 30px;
+    height: 100%;
+      
+}
+
+h3 {
+    font-size: 25px;
+    margin: 10px;
+}
+
+p {
+    font-size: 20px;
+}
+
+
+
+.img {
+    width: 600px;
+}
+
+.img img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.boxa1 {
+    background-color:black;
+    border-radius: 10px;
+    margin: 10px 200px;
+    padding: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+
+}
+
+.boxa1 a {
+    font-size: 25px;
+    color:white;
+    text-decoration: none;
+}
+
+
+/*media queris*/
+
+@media (max-width: 768px) {
+    .nav-items {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background: rgb(189, 241, 239);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        transform: translate(-100%);
+        transition: 0.3s ease all;
+        z-index: 1;
+    }
+
+    .nav-items a {
+        text-align: center;
+    }
+
+    .nav-toggle {
+
+        display: flex !important;
+        flex-direction: column;
+        margin: 15px;
+    }
+
+    .nav-toggle span {
+        width: 30px;
+        height: 4px;
+        background: white;
+        margin-bottom: 5px;
+        border-radius: 2px;
+        transform-origin: 5px 0px;
+        /*La propiedad CSS transform-origin le permite modificar el origen de las transformaciones de un elemento. Por ejemplo, el transform-origin de la función rotate() es el centro de rotación. (Esta propiedad es aplicada a la primera translación del elemento por el valor negativo de la propiedad.*/
+        transition: all 0.2s linear;
+    }
+
+    .close span {
+        transform: rotate(45deg) translate(0px, 0px);
+    }
+
+    .close span:nth-child(2) {
+        display: none;
+
+    }
+
+    .close span:nth-child(3) {
+        /*nth-child() es una pseudo-clase que selecciona a los elementos en un grupo de hermanos que coinciden con el patrón especificado. La forma en la que se construye dicho patrón es usando palabras clave, valores enteros, una fórmula e incluso selectores.*/
+        transform: rotate(-45deg) translate(-5px 1px);
+    }
+
+    .open {
+        transform: translatex(0) !important
+    }
+}
