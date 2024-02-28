@@ -1,0 +1,147 @@
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.box1 {
+    background-color: rgb(14, 95, 128);
+    color: black;
+}
+
+/* header*/
+.navbar {
+    background: rgb(73, 183, 202);
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo {
+    font-weight: bold;
+    font-size: 20px;
+    margin: 15px;
+    color: black;
+}
+
+.nav-items a {
+    margin: 15px;
+    color: black;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+/*::before crea un pseudoelemento que es el primer hijo del elemento seleccionado. Es usado normalmente para añadir contenido
+ estético a un elemento, usando la propiedad content . Este elemento se muestra en línea con el texto de forma predeterminada.*/
+
+.nav-items a::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: all 0.5s;
+}
+
+.nav-toggle {
+    display: none;
+}
+
+
+/*main*/
+
+main {
+    background-color: rgb(173, 162, 155);
+  
+  }
+  
+  .Contactame {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    padding: 50px;
+    color: black;
+    margin-left: 500px;
+  
+  }
+  
+  
+  
+  .h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    color: black;
+    border: solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-color: white;
+    margin-left: 500px;
+    margin-right: 500px;
+  
+  }
+   main h2{
+    font-size: 40px;
+   }
+  .h1 h1 {
+    font-size: 100px;
+  }
+  
+  .a {
+    display: flex;
+    justify-content: center;
+  
+  
+  }
+  
+  .a a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+  }
+  
+  .uno {
+    padding: 40px;
+    border: solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-color: white;
+  }
+  
+  .dos {
+    padding: 40px;
+    border: solid;
+    border-top: none;
+    border-left: none;
+    border-bottom: none;
+    border-color: white;
+  }
+  
+  .seguime {
+    padding: 60px;
+  }
+  
+  .redes{
+    padding: 40px;
+  }
+  .redes a {
+    color: white;
+    font-size: 25px;
+    text-decoration: none;
+    background-color: black;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  
+  
+  
